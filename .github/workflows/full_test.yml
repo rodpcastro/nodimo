@@ -3,7 +3,7 @@ name: Full Test
 on:
   push:
     branches:
-      - main
+      - main, username
   pull_request:
     branches:
       - main
