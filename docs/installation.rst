@@ -16,7 +16,7 @@ Choose one of the following options:
 
 3. To build from source, first clone the repository by running::
 
-    git clone https://github.com/rodrigopcastro018/nodimo
+    git clone https://github.com/rodpcastro/nodimo
 
    And then, from the package repository, run::
     

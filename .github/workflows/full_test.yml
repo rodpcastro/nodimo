@@ -20,7 +20,7 @@ jobs:
         py:
           - python: '3.9'
             sympy: '1.7'
-          - python: '3.12'
+          - python: '3.13'
             sympy: '1.13'
       fail-fast: false
 
@@ -50,6 +50,7 @@ jobs:
         with:
           name: coverage-${{ runner.os }}-py${{ matrix.py.python }}
           path: .coverage
+          include-hidden-files: true
 
       - name: Store results folder
         uses: actions/upload-artifact@v4
@@ -81,7 +82,7 @@ jobs:
       - name: Set up python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.13'
 
       - name: Download tests results
         uses: actions/download-artifact@v4
@@ -104,6 +105,7 @@ jobs:
         with:
           name: coverage
           pattern: coverage-*
+          include-hidden-files: true
           delete-merged: true
 
   combine_coverage:
@@ -117,7 +119,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.13'
 
       - name: Download coverage files
         uses: actions/download-artifact@v4
@@ -154,7 +156,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: '3.13'
 
       - name: Download coverage HTML
         uses: actions/download-artifact@v4
