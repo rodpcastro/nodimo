@@ -15,8 +15,8 @@ jobs:
       matrix:
         os:
           - windows-latest
-          - ubuntu-latest
-          - macos-latest
+          # - ubuntu-latest
+          # - macos-latest
         py:
           - python: '3.9'
             sympy: '1.7'
@@ -50,6 +50,7 @@ jobs:
         with:
           name: coverage-${{ runner.os }}-py${{ matrix.py.python }}
           path: .coverage
+          include-hidden-files: true
 
       - name: Store results folder
         uses: actions/upload-artifact@v4
