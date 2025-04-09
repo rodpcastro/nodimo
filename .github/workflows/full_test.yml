@@ -105,6 +105,7 @@ jobs:
         with:
           name: coverage
           pattern: coverage-*
+          include-hidden-files: true
           delete-merged: true
 
   combine_coverage:
