@@ -35,7 +35,7 @@ classifiers = [
 ]
 
 [project.urls]
-'Source' = 'https://github.com/rodrigopcastro018/nodimo'
+'Source' = 'https://github.com/rodpcastro/nodimo'
 'Documentation' = 'https://nodimo.readthedocs.io/'
 
 [project.optional-dependencies]

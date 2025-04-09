@@ -133,10 +133,10 @@ with instructions that were followed in the publishing process and are left as r
 * `Conda-Forge Feedstock`_
 
 
-.. _GitHub: https://github.com/rodrigopcastro018/nodimo
+.. _GitHub: https://github.com/rodpcastro/nodimo
 .. _Git: https://git-scm.com/
 .. _GitHub instructions: https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project
-.. _GitHub Actions: https://github.com/rodrigopcastro018/nodimo/actions
+.. _GitHub Actions: https://github.com/rodpcastro/nodimo/actions
 .. _smokeshow: https://github.com/samuelcolvin/smokeshow
 .. _mypy: https://mypy-lang.org/
 .. _pytest: https://docs.pytest.org/
@@ -162,11 +162,11 @@ with instructions that were followed in the publishing process and are left as r
 .. |Documentation status| image:: https://readthedocs.org/projects/nodimo/badge/?version=latest
     :target: https://nodimo.readthedocs.io/
     :alt: Documentation status
-.. |Tests status| image:: https://img.shields.io/github/actions/workflow/status/rodrigopcastro018/nodimo/full_test.yml?branch=main&label=Tests
-    :target: https://github.com/rodrigopcastro018/nodimo/actions/workflows/full_test.yml
+.. |Tests status| image:: https://img.shields.io/github/actions/workflow/status/rodpcastro/nodimo/full_test.yml?branch=main&label=Tests
+    :target: https://github.com/rodpcastro/nodimo/actions/workflows/full_test.yml
     :alt: Tests status
-.. |Tests coverage| image:: https://coverage-badge.samuelcolvin.workers.dev/rodrigopcastro018/nodimo.svg
-    :target: https://coverage-badge.samuelcolvin.workers.dev/redirect/rodrigopcastro018/nodimo
+.. |Tests coverage| image:: https://coverage-badge.samuelcolvin.workers.dev/rodpcastro/nodimo.svg
+    :target: https://coverage-badge.samuelcolvin.workers.dev/redirect/rodpcastro/nodimo
     :alt: Tests coverage
 .. _Publishing to PyPI: https://packaging.python.org/en/latest/tutorials/packaging-projects/
 .. _Publishing to Anaconda personal repository: https://docs.conda.io/projects/conda-build/en/latest/user-guide/tutorials/build-pkgs.html
