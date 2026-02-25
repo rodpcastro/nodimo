@@ -29,6 +29,8 @@ classifiers = [
   'Programming Language :: Python :: 3.10',
   'Programming Language :: Python :: 3.11',
   'Programming Language :: Python :: 3.12',
+  'Programming Language :: Python :: 3.13',
+  'Programming Language :: Python :: 3.14',
   'Programming Language :: Python :: 3 :: Only',
   'Typing :: Typed',
   'Operating System :: OS Independent',
@@ -58,7 +60,7 @@ docs = [
 format = ['black>=22.1.0']
 
 [tool.mypy]
-python_version = '3.12'
+python_version = '3.14'
 files = 'nodimo'
 exclude = ['tests']
 ignore_missing_imports = 'True'
@@ -87,7 +89,7 @@ source = ['nodimo']
 directory = '.coverage/htmlcov'
 
 [tool.black]
-target-version = ['py39', 'py310', 'py311', 'py312', 'py313']
+target-version = ['py39', 'py310', 'py311', 'py312', 'py313', 'py314']
 skip-string-normalization = 'True'
 include = 'nodimo\/.*\.pyi?$'
 
@@ -95,7 +97,7 @@ include = 'nodimo\/.*\.pyi?$'
 legacy_tox_ini = """
     [tox]
     min_version = 4.0
-    env_list = 
+    env_list =
         pytest-coverage
         type
 
@@ -103,29 +105,29 @@ legacy_tox_ini = """
     skip_install = true
     ignore_errors = true
     parallel_show_output = true
-    deps = 
+    deps =
         pytest>=6.2
         nbval>=0.11
         coverage>=7.0
         pytest-cov>=2.10
         {env:SYMPY}
-    commands = 
+    commands =
         python -m pytest -q --junit-xml=tests_results/results-{env:CONTEXT}/pytest_result.xml
         coverage json -o tests_results/results-{env:CONTEXT}/coverage_result.json
-    pass_env = 
+    pass_env =
         CONTEXT
         SYMPY_VERSION
-    set_env = 
+    set_env =
         SYMPY = sympy=={env:SYMPY_VERSION}
         COVERAGE_FILE = .coverage/.coverage.{env:CONTEXT}
 
     [testenv:type]
     skip_install = true
     parallel_show_output = true
-    deps = 
+    deps =
         mypy>=1.0
-    commands = 
+    commands =
         mypy --junit-xml tests_results/results-{env:CONTEXT}/mypy_result.xml
-    pass_env = 
+    pass_env =
         CONTEXT
 """
