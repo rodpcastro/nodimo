@@ -9,7 +9,6 @@ on:
       - main
 
 jobs:
-  
   tests:
     strategy:
       matrix:
@@ -18,14 +17,14 @@ jobs:
           - ubuntu-latest
           - macos-latest
         py:
-          - python: '3.9'
-            sympy: '1.7'
-          - python: '3.13'
-            sympy: '1.13'
+          - python: "3.9"
+            sympy: "1.7"
+          - python: "3.14"
+            sympy: "1.14"
       fail-fast: false
 
     name: ${{ matrix.os }}-py${{ matrix.py.python }}-sp${{ matrix.py.sympy }}
-    
+
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -35,7 +34,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.py.python }}
-      
+
       - name: Install tox
         run: python -m pip install tox
 
@@ -82,14 +81,14 @@ jobs:
       - name: Set up python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: "3.14"
 
       - name: Download tests results
         uses: actions/download-artifact@v4
         with:
           name: tests_results
           path: tests_results
-    
+
       - name: Create summary
         run: python3 .github/tests_summary.py
 
@@ -99,7 +98,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Merge coverage
         uses: actions/upload-artifact/merge@v4
         with:
@@ -119,20 +117,20 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: "3.14"
 
       - name: Download coverage files
         uses: actions/download-artifact@v4
         with:
           name: coverage
           path: .coverage
-      
+
       - name: Install coverage
         run: pip install coverage[toml]
-      
+
       - name: Coverage combine
         run: coverage combine .coverage
-      
+
       - name: Generate combined coverage HTML
         run: coverage html --show-contexts --title "Coverage for ${{ github.sha }}"
 
@@ -156,17 +154,17 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: "3.14"
 
       - name: Download coverage HTML
         uses: actions/download-artifact@v4
         with:
           name: coverage_html
           path: .coverage/htmlcov
-      
+
       - name: Install smokeshow
         run: pip install smokeshow
-      
+
       - name: Smokeshow coverage HTML
         run: smokeshow upload .coverage/htmlcov
         env:
