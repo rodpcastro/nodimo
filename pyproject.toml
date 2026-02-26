@@ -7,10 +7,10 @@ name = 'nodimo'
 version = '2.0.0'
 dependencies = ['sympy>=1.7']
 authors = [
-    {name = 'Rodrigo Castro', email = 'rodrigopcastro018@gmail.com'}
+    {name = 'Rodrigo Castro', email = 'code@rpc.aleeas.com'}
 ]
 maintainers = [
-    {name = 'Rodrigo Castro', email = 'rodrigopcastro018@gmail.com'}
+    {name = 'Rodrigo Castro', email = 'code@rpc.aleeas.com'}
 ]
 description = "Nodimo is a tool that creates dimensionless models"
 readme = 'README.md'
